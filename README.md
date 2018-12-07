@@ -1,13 +1,15 @@
 - IDE ECLIPSE (spring tools suit 3)
 - creation d'un projet spring mvc 
 - configuration
-- gÃ©rer les dependences
+- gérer les dependences
 
 new other -> spring -> spring legacy project 
+
 	nom -> Gestion_de_stock
 		spring mvc project
 	package -> com.stock.mvc
-en bas un dossier 
+	
+- en bas un dossier 
 	- src
 		- main
 			- java
@@ -71,14 +73,14 @@ en bas un dossier
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath*:applicationContext.xml</param-value>
 	</context-param>
-# ---------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------
 # creation des entity JPA
-# cree un nouveu package dans com.stock.mvc
+- cree un nouveu package dans com.stock.mvc
 		com.stock.mvc.entities
 	dans ce package on va cree des classes(les entities)
 		- Article (une entity JAP il doit implementer automatiquement serializable)
 			@entity //=>pour dir qu'il est une class entity
-			@Table(name ="article" )//il est possible de ne pas montionÃ© le name 
+			@Table(name ="article" )//il est possible de ne pas montioné le name 
 			public class Article impliments Serializable{
 				@Id
 				@GeneratedVAlue//pour autoIncriment
@@ -87,10 +89,9 @@ en bas un dossier
 
 			de meme facons les autres classes
 
-# Ajouter les autres champ dans les classes crees
+- Ajouter les autres champ dans les classes crees
 
-# ASTUS DANS IDE ECLIPSE
+- ASTUS DANS IDE ECLIPSE
 Pour changer int or string... d'un variable avec son getter and setters en meme fois
 alt+shift+r+r    // boutton r 2 fois
-
-# Ajouter les constructeur vides
+Ajouter les constructeur vides
