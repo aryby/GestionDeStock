@@ -1,45 +1,96 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+- IDE ECLIPSE (spring tools suit 3)
+- creation d'un projet spring mvc 
+- configuration
+- gérer les dependences
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+new other -> spring -> spring legacy project 
+	nom -> Gestion_de_stock
+		spring mvc project
+	package -> com.stock.mvc
+en bas un dossier 
+	- src
+		- main
+			- java
+			- resources : les copies de src/main/resources
+				-meta-inf
+			- webapp : nous metons tous se qu'est web et les fichier de configuration web
+				resources
+				- web-inf
+					classes
+					-spring
+					-view
+						home.jsp
+					web.xml
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+# 1er des choses on va commencer de cree dans :src/main/resources -> meta-inf
+	persistence.xml
 
----
+# 2EME  cree dans :src/main/resources
+	configurationContext.xml
 
-## Edit a file
+# Ajouter les dependences dans pom.xml
+	<dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>${org.springframework-version}</version>
+    </dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>3.1.1.RELEASE</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-entitymanager</artifactId>
+		<version>3.6.0.Final</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-commons-annotations</artifactId>
+		<version>3.2.0.Final</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-validator</artifactId>
+		<version>4.1.0.Final</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate.javax.persistence</groupId>
+		<artifactId>hibernate-jpa-2.0-api</artifactId>
+		<version>1.0.1.Final</version>
+	</dependency>
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.6</version>
+	</dependency>
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+# modifier le fichier web.xml
+	pour executer ces modification et cree la BDD
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:applicationContext.xml</param-value>
+	</context-param>
+# ---------------------------------------------------------------------------------------------------
+# creation des entity JPA
+# cree un nouveu package dans com.stock.mvc
+		com.stock.mvc.entities
+	dans ce package on va cree des classes(les entities)
+		- Article (une entity JAP il doit implementer automatiquement serializable)
+			@entity //=>pour dir qu'il est une class entity
+			@Table(name ="article" )//il est possible de ne pas montioné le name 
+			public class Article impliments Serializable{
+				@Id
+				@GeneratedVAlue//pour autoIncriment
+				private Long IdArticle;
+			}
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+			de meme facons les autres classes
 
----
+# Ajouter les autres champ dans les classes crees
 
-## Create a file
+# ASTUS DANS IDE ECLIPSE
+Pour changer int or string... d'un variable avec son getter and setters en meme fois
+alt+shift+r+r    // boutton r 2 fois
 
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
-
----
-
-## Clone a repository
-
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+# Ajouter les constructeur vides
