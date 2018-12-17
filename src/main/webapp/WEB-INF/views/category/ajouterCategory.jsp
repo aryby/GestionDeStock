@@ -56,7 +56,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
-						<h1 class="page-header"><fmt:message key="category.nouveau"></fmt:message></h1>
+						<h1 class="page-header"><spring:message code="category.nouveau"></spring:message></h1>
 					</div>
 					<!-- /.col-lg-12 -->
 				</div>
@@ -67,15 +67,15 @@
 							<li>
 								<a href='<c:url value="/category/nouveau"></c:url>'>
 									<i class="fa fa-plus">
-										<fmt:message key="common.ajouter"></fmt:message>
+										<spring:message code="common.ajouter"></spring:message>
 									</i>
 								</a>
 							</li>
 							
-							<li><a href="#"><i class="fa fa-upload"> <fmt:message
-											key="common.exporter"></fmt:message></i></a></li>
-							<li><a href="#"><i class="fa fa-download"> <fmt:message
-											key="common.importer"></fmt:message></i></a></li>
+							<li><a href="#"><i class="fa fa-upload"> <spring:message
+											code="common.exporter"></spring:message></i></a></li>
+							<li><a href="#"><i class="fa fa-download"> <spring:message
+											code="common.importer"></spring:message></i></a></li>
 						</ol>
 					</div>
 				</div>
@@ -84,7 +84,7 @@
 					<div class="col-lg-12">
 						<div class="panel panel-primary">
 							<div class="panel-heading">
-								<fmt:message key="category.nouveau"></fmt:message>
+								<spring:message code="category.nouveau"></spring:message>
 							</div>
 							<!-- /.panel-heading -->
 							<div class="panel-body">
@@ -92,11 +92,11 @@
 								<f:form modelAttribute="category" action="${urlEnregistrer }" role="form">
 									<f:hidden path="idCategory"/>
                                    <div class="form-group">
-                                       <label><fmt:message key="common.category"></fmt:message></label>
+                                       <label><spring:message code="common.category"></spring:message></label>
                                        <f:input path="code" class="form-control" placeholder="Entrer le code ici..."/>
                                    </div>
                                    <div class="form-group">
-                                       <label><fmt:message key="common.designation"></fmt:message></label>
+                                       <label><spring:message code="common.designation"></spring:message></label>
                                        <f:input path="designation" class="form-control" placeholder="Entrer la designation ici..."/>
                                    </div>
                                   
@@ -104,11 +104,12 @@
                                    <div class="panel-footer">
                                    	<button type="submit" class="btn btn-block btn-primary">
                                    		<i class="fa fa-save">&nbsp;
-                                   			<fmt:message key="common.enregistrer"></fmt:message>
+                                   			<spring:message code="common.enregistrer"></spring:message>
                                    		</i></button>
                                    	<a href='<c:url value="/client/"></c:url>' class="btn btn-block btn-danger">
                                    		<i class="fa fa-arrow-left">&nbsp;
-                                   			<fmt:message key="common.annuler"></fmt:message>
+                                   			<spring:message code="common.annuler">
+                                   			</spring:message>
                                    		</i>
                                    	</a>
                                    </div>

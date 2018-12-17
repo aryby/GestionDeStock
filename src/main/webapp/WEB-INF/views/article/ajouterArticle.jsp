@@ -56,7 +56,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
-						<h1 class="page-header"><fmt:message key="article.nouveau"></fmt:message></h1>
+						<h1 class="page-header"><spring:message code="article.nouveau"></spring:message></h1>
 					</div>
 					<!-- /.col-lg-12 -->
 				</div>
@@ -67,15 +67,14 @@
 							<li>
 								<a href='<c:url value="/article/nouveau"></c:url>'>
 									<i class="fa fa-plus">
-										<fmt:message key="common.ajouter"></fmt:message>
+										<spring:message code="common.ajouter"></spring:message>
 									</i>
 								</a>
 							</li>
 							
-							<li><a href="#"><i class="fa fa-upload"> <fmt:message
-											key="common.exporter"></fmt:message></i></a></li>
-							<li><a href="#"><i class="fa fa-download"> <fmt:message
-											key="common.importer"></fmt:message></i></a></li>
+							<li><a href="#"><i class="fa fa-upload"> <spring:message code="common.exporter"></spring:message></i></a></li>
+							<li><a href="#"><i class="fa fa-download"> <spring:message
+											code="common.importer"></spring:message></i></a></li>
 						</ol>
 					</div>
 				</div>
@@ -83,7 +82,7 @@
 					<div class="col-lg-12">
 						<div class="panel panel-primary">
 							<div class="panel-heading">
-								<fmt:message key="article.nouveau"></fmt:message>
+								<spring:message code="article.nouveau"></spring:message>
 							</div>
 							<!-- /.panel-heading -->
 							<div class="panel-body">
@@ -92,42 +91,42 @@
 									<f:hidden path="idArticle"/>
 									<f:hidden path="photo"/>
                                    <div class="form-group">
-                                       <label><fmt:message key="common.code"></fmt:message></label>
+                                       <label><spring:message code="common.code"></spring:message></label>
                                        <f:input path="codeArticle" class="form-control" placeholder="Entrer le code ici..."/>
                                    </div>
                                    <div class="form-group">
-                                       <label><fmt:message key="common.designation"></fmt:message></label>
+                                       <label><spring:message code="common.designation"></spring:message></label>
                                        <f:input path="designation" class="form-control" placeholder="Entrer la designation ici..."/>
                                    </div>
                                    <div class="form-group">
-                                       <label><fmt:message key="common.prixHT"></fmt:message></label>
+                                       <label><spring:message code="common.prixHT"></spring:message></label>
                                        <f:input id="prixUnitHT" path="prixUnitaireHT" class="form-control" placeholder="Entrer votre prixHT ici..."/>
                                    </div>
                                    <div class="form-group">
-                                       <label><fmt:message key="common.TVA"></fmt:message></label>
+                                       <label><spring:message code="common.TVA"></spring:message></label>
                                        <f:input id="tauxTVA" path="tauxTva" class="form-control" placeholder="Entrer la TVA ici..."/>
                                    </div>
                                    <div class="form-group">
-                                       <label><fmt:message key="common.prixTTC"></fmt:message></label>
+                                       <label><spring:message code="common.prixTTC"></spring:message></label>
                                        <f:input id="prixUnitTTC" path="prixUnitaireTTC" class="form-control" placeholder="Entrer la TTC ici..."/>
                                    </div>
                                    <div class="form-group">
-                                       <label><fmt:message key="common.category"></fmt:message></label>
+                                       <label><spring:message code="common.category"></spring:message></label>
 											<f:select class="form-control" path="category.idCategory" items="${categories }" itemLabel="code" itemValue="idCategory"></f:select>
                                    </div>
                                    <div class="form-group">
-                                         <label><fmt:message key="common.photo"></fmt:message></label>
+                                         <label><spring:message code="common.photo"></spring:message></label>
                                             <input type="file" name = "file"/>
                                         </div>
                                   
                                    <div class="panel-footer">
                                    	<button type="submit" class="btn btn-block btn-primary">
                                    		<i class="fa fa-save">&nbsp;
-                                   			<fmt:message key="common.enregistrer"></fmt:message>
+                                   			<spring:message code="common.enregistrer"></spring:message>
                                    		</i></button>
                                    	<a href='<c:url value="/article/"></c:url>' class="btn btn-block btn-danger">
                                    		<i class="fa fa-arrow-left">&nbsp;
-                                   			<fmt:message key="common.annuler"></fmt:message>
+                                   			<spring:message code="common.annuler"></spring:message>
                                    		</i>
                                    	</a>
                                    </div>

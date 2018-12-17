@@ -1,7 +1,6 @@
 <%@ include file="/WEB-INF/views/includes/includes.jsp"%>
 <!DOCTYPE html>
-<html lang="fr">
-
+<html lang="fr﻿">
 <head>
 
 <meta charset="utf-8">

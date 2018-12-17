@@ -64,7 +64,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<h1 class="page-header">
-							<fmt:message key="common.article"></fmt:message>
+							<spring:message code="common.article"></spring:message>
 						</h1>
 					</div>
 				</div>
@@ -72,13 +72,13 @@
 					<div class="lol-lg-12">
 						<ol class="breadcrumb">
 							<li><a href='<c:url value="/article/nouveau"></c:url>'> <i
-									class="fa fa-plus"> <fmt:message key="common.ajouter"></fmt:message>
+									class="fa fa-plus"> <spring:message code="common.ajouter"></spring:message>
 								</i>
 							</a></li>
-							<li><a href="#"><i class="fa fa-upload"> <fmt:message
-											key="common.exporter"></fmt:message></i></a></li>
-							<li><a href="#"><i class="fa fa-download"> <fmt:message
-											key="common.importer"></fmt:message></i></a></li>
+							<li><a href="#"><i class="fa fa-upload"> 
+							<spring:message code="common.exporter"></spring:message></i></a></li>
+							<li><a href="#"><i class="fa fa-download"> <spring:message
+											code="common.importer"></spring:message></i></a></li>
 						</ol>
 					</div>
 				</div>
@@ -86,7 +86,7 @@
 					<div class="col-lg-12">
 						<div class="panel panel-primary">
 							<div class="panel-heading">
-								<fmt:message key="article.liste"></fmt:message>
+								<spring:message code="article.liste"></spring:message>
 							</div>
 							<!-- /.panel-heading -->
 							<div class="panel-body">
@@ -95,14 +95,14 @@
 									id="dataTables-example">
 									<thead>
 										<tr>
-											<th><fmt:message key="common.photo"></fmt:message></th>
-											<th><fmt:message key="common.code"></fmt:message></th>
-											<th><fmt:message key="common.designation"></fmt:message></th>
-											<th><fmt:message key="common.prixHT"></fmt:message></th>
-											<th><fmt:message key="common.TVA"></fmt:message></th>
-											<th><fmt:message key="common.TTC"></fmt:message></th>
-											<th><fmt:message key="common.category"></fmt:message></th>
-											<th><fmt:message key="common.action"></fmt:message></th>
+											<th><spring:message code="common.photo"></spring:message></th>
+											<th><spring:message code="common.code"></spring:message></th>
+											<th><spring:message code="common.designation"></spring:message></th>
+											<th><spring:message code="common.prixHT"></spring:message></th>
+											<th><spring:message code="common.TVA"></spring:message></th>
+											<th><spring:message code="common.TTC"></spring:message></th>
+											<th><spring:message code="common.category"></spring:message></th>
+											<th><spring:message code="common.action"></spring:message></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -132,14 +132,14 @@
 															<div class="modal-content">
 																<div class="modal-header">
 																	<button type="button" class="close"	data-dismiss="modal" aria-hidden="true">&times;</button>
-																	<h4 class="modal-title" id="myModalLabel"><fmt:message key="common.confirm.suppression"></fmt:message></h4>
+																	<h4 class="modal-title" id="myModalLabel"><spring:message code="common.confirm.suppression"></spring:message></h4>
 																</div>
 																<div class="modal-body">
-																	<fmt:message key="article.confirm.suppression.msg"></fmt:message>
+																	<spring:message code="article.confirm.suppression.msg"></spring:message>
 																</div>
 																<div class="modal-footer">
 																	<button type="button" class="btn btn-default" data-dismiss="modal">
-																		<fmt:message key="common.annuler"></fmt:message></button>
+																		<spring:message code="common.annuler"></spring:message></button>
 																	<c:url value="/article/supprimer/${article.getIdArticle() }" var="urlSuppression"></c:url>
 																	<a href="${urlSuppression }" class="btn btn-danger"><i class="fa fa-trash-o"></i></a>
 																</div>

@@ -11,32 +11,30 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class Fournisseur implements Serializable{
-	
+public class Fournisseur implements Serializable {
+
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-
 	@Id
 	@GeneratedValue
 	private Long idFournisseur;
 
-	
-private String nom;
-	
+	private String nom;
+
 	private String prenom;
-	
+
 	private String adresse;
-	
+
 	private String photo;
-	
+
 	private String mail;
-	
-	@OneToMany(mappedBy="fournisseur")
-	private List<CommandeFournisseur>commandeFournisseurs;
-	
+
+	@OneToMany(mappedBy = "fournisseur")
+	private List<CommandeFournisseur> commandeFournisseurs;
+
 	public Fournisseur() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -89,6 +87,5 @@ private String nom;
 	public void setIdFournisseur(Long id) {
 		this.idFournisseur = id;
 	}
-	
-	
+
 }
