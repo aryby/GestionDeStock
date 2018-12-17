@@ -94,4 +94,4 @@ new other -> spring -> spring legacy project
 - ASTUS DANS IDE ECLIPSE
 Pour changer int or string... d'un variable avec son getter and setters en meme fois
 alt+shift+r+r    // boutton r 2 fois
-Ajouter les constructeur vides
+Ajouter les constructeur vides# GestionDeStock
