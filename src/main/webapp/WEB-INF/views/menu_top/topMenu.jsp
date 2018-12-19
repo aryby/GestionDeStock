@@ -1,9 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="f"%>
-<%@ page session="true"%>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="fmt"%>
-<%@ page session="true"%>
-<%@ page trimDirectiveWhitespaces="true"%>
 <div class="navbar-header">
 	<button type="button" class="navbar-toggle" data-toggle="collapse"
 		data-target=".navbar-collapse">
@@ -106,7 +100,8 @@
 			<li><a href="${frUrl }"><i class="fa fa-globe fa-fw"></i> <spring:message code="locale.fr" /></a></li>
 			<li><a href="${enUrl }"><i class="fa fa-globe fa-fw"></i> <spring:message code="locale.en" /></a></li>
 			<li class="divider"></li>
-			<li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a></li>
+			<c:url value="/j_spring_security_logout" var="logout"></c:url>
+			<li><a href="${logout }"><i class="fa fa-sign-out fa-fw"></i>Logout</a></li>
 			
 			
 		</ul> <!-- /.dropdown-user --></li>

@@ -36,4 +36,13 @@ public class LoginController {
 		return "login/login";
 	}
 	
+	@RequestMapping(value = "/failedlogin")
+	public String failedLogin(Locale locale, Model model) {
+		
+		
+		return "login/login";
+	}
+	
+	
+	
 }
